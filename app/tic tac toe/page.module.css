@@ -1,20 +1,49 @@
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: #ffee93; /* Soft yellow background for a cheerful vibe */
+  border: 3px solid #00b4d8; /* Bright cyan border for better visibility */
   float: left;
-  font-size: 24px;
+  font-size: 36px; /* Larger font for better readability */
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  line-height: 100px; /* Adjusted for bigger squares */
+  height: 100px; /* Increased size for more prominence */
+  margin-right: -2px; /* Adjusted margins for smooth grid alignment */
+  margin-top: -2px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 100px; /* Matching height for perfect squares */
+  transition: background 0.3s, transform 0.2s; /* Smooth hover effect */
+  cursor: pointer; /* Indicate interactivity */
 }
+
+.square:hover {
+  background: #ffcccb; /* Light pink hover effect for fun interaction */
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+.square:active {
+  background: #ffb6c1; /* Softer pink when clicked */
+}
+
 
 .boardRow:after {
   clear: both;
   content: '';
   display: table;
+}
+
+.status {
+  margin-bottom: 20px; /* Increased spacing for better layout */
+  font-size: 24px; /* Larger font size for visibility */
+  font-weight: bold;
+  color: #6a0572; /* Vibrant purple for status text */
+  text-align: center;
+}
+
+/* Player colors for symbols */
+.square[data-player='X'] {
+  color: #ff6f61; /* Bright coral for player X */
+}
+
+.square[data-player='O'] {
+  color: #6a0572; /* Deep purple for player O */
 }
