@@ -5,14 +5,13 @@ export default function Navbar() {
   return (
     <header id="navbar">
       <h1>
-        <Link href="/">{APP_NAME}</Link>
+        <Link href="/">Ex2- Neta Hochauser</Link>
       </h1>
       <nav>
+{/*         
         <Link href="/">Home</Link>
-        <Link href={COURSE_GITHUB} target="_blank">
-          GitHub
-        </Link>
-        {DEMOS_ENABLED ? <Link href="/demos">Demos</Link> : null}
+        <Link href="/nasa page">Nasa Images</Link>
+        <Link href="/tic tac toe page">Tic Tac Toe</Link> */}
       </nav>
     </header>
   );

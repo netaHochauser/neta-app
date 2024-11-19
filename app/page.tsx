@@ -1,12 +1,13 @@
-import Image from "next/image";
-import Square from "./tic tac toe/page";
-import Board from "./tic tac toe/page";
+import { NasaApp } from "./nasa/page";
+import TicTacToePage from "./tic tac toe/tic tac toe page";
 
 export default function Home() {
   return (
     <main>
       <div>
-        <Board></Board>
+        {/* <h1>Hello and welcome to my exrcise</h1> */}
+        <TicTacToePage/>
+        <NasaApp/>
       </div>
     </main>
   );
