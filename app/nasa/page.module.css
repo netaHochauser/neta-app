@@ -1,0 +1,6 @@
+.data {
+    margin-left: 30px; /* Moves content slightly to the right */
+    padding-left: 20px; /* Adds spacing inside the container, also shifting content */
+    max-width: 1200px; /* Optional: limits width for better layout */
+    margin-right: auto; /* Centers content if max-width is smaller than viewport */
+  }

@@ -30,7 +30,7 @@ export default async function NasaApp(){
   const nasaData = await getData(10);
 
   return (
-    <div>
+    <div className={styles.data}>
       <h1>Nasa Images</h1>
       {nasaData.map((n:Nasaprops, index: number) => 
       <NasaItem

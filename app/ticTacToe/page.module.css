@@ -47,3 +47,11 @@
 .square[data-player='O'] {
   color: #6a0572; /* Deep purple for player O */
 }
+
+.board {
+  display: flex; /* Enables Flexbox */
+  flex-direction: column; /* Keeps rows stacked vertically */
+  justify-content: center; /* Centers rows vertically */
+  align-items: center; /* Centers rows horizontally */
+  height: 50vh; /* Full viewport height */
+}

@@ -5,8 +5,6 @@ export default function Home() {
     <main>
       <div>
         <h1>Hello and welcome to my exrcise</h1>
-        {/* <TicTacToePage/>
-        <NasaApp/> */}
       </div>
     </main>
   );
