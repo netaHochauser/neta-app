@@ -8,10 +8,10 @@ export default function Navbar() {
         <Link href="/">Ex2- Neta Hochauser</Link>
       </h1>
       <nav>
-{/*         
+        
         <Link href="/">Home</Link>
-        <Link href="/nasa page">Nasa Images</Link>
-        <Link href="/tic tac toe page">Tic Tac Toe</Link> */}
+        <Link href="/nasa">Nasa Images</Link>
+        <Link href="/ticTacToe">Tic Tac Toe</Link>
       </nav>
     </header>
   );

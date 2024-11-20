@@ -26,7 +26,7 @@ function NasaItem(props : Nasaprops){
   );
 }
 
-export async function NasaApp(){
+export default async function NasaApp(){
   const nasaData = await getData(10);
 
   return (
