@@ -1,4 +1,3 @@
-import TicTacToePage from ".//tic tac toe page";
 
 export default function Home() {
   return (

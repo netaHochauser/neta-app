@@ -1,0 +1,155 @@
+.logo{
+  display: flex;
+  padding: 0.125rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+}
+
+.welcome{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: -0.125rem;
+align-self: stretch;
+}
+
+.welcomTitle{
+  color: var(--Sleep-Paralysis-Demon-Purple, #280F36);
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  
+  /* koteretGdola */
+  font-family: Nunito;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.3125rem; /* 87.5% */
+  flex: 1 0 0;
+}
+
+.welcomTalk{
+  display: flex;
+  padding: 0rem 0.5625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+
+}
+
+.inputsAndButtons{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8125rem;
+  align-self: stretch;
+
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8125rem;
+  align-self: stretch;
+}
+
+.emailAndPassward{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  align-self: stretch;
+}
+
+.email{
+  display: flex;
+  height: 3.125rem;
+  padding: 0.1875rem 0.625rem;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+}
+
+
+.input{
+  border-radius: 0.375rem;
+  border: 2px solid #000;
+  position: absolute;
+  width: 19.1875rem;
+  height: 3.125rem;
+}
+
+.cantRemember{
+  color: var(--Sleep-Paralysis-Demon-Purple, #280F36);
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Nunito;
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 800;
+line-height: 1.3125rem; /* 175% */
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: auto;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+}
+
+.buttons{
+  display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.8125rem;
+align-self: stretch;
+}
+
+.login{
+  display: flex;
+  height: 2.8125rem;
+  padding: 0.6875rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  border-radius: 3.875rem;
+  border: 2px solid var(--Sleep-Paralysis-Demon-Purple, #280F36);
+  background: var(--Sleep-Paralysis-Demon-Purple, #280F36);
+
+  color: var(--Vivid-Orange, #FFC1A0);
+  font-family: "SF Pro Text";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3125rem; /* 131.25% */
+}
+
+.signUp{
+  display: flex;
+  height: 2.8125rem;
+  padding: 0.6875rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  border-radius: 3.875rem;
+  border: 2px solid var(--Sleep-Paralysis-Demon-Purple, #280F36);
+}
+
+.background{
+  background: var(--Vivid-Orange, #FFC1A0);
+  backdrop-filter: blur(24px);
+  display: flex;
+  width: 23.4375rem;
+  height: 50.75rem;
+  padding: 5rem 2.125rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8125rem;
+}
