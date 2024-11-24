@@ -1,9 +1,20 @@
+"use client";
+
+import ErrorPage from "./components/error";
 import styles from "./page.module.css";
+import { useRouter } from 'next/navigation';
 
 
 export default function LoginPage() {
+  const router = useRouter();
+
+  const handleLoginClick = () => {
+    router.push("./components/error"); 
+  };
+
   return (
     <main>
+      <ErrorPage></ErrorPage>
       <div className={styles.background}>
       <video autoPlay loop muted>
         <source src="/background.mp4" type="video/mp4" />
@@ -36,7 +47,7 @@ export default function LoginPage() {
           <text className={styles.cantRemember}>Can’t Remember?</text>
         </div>
         <div className={styles.buttons}>
-          <button className={styles.login}>Login</button>
+          <button className={styles.login} onClick={handleLoginClick}>Login</button>
           <button className={styles.signUp}>Sign Up</button>
         </div>
       </div> 
