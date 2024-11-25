@@ -1,7 +1,10 @@
 import styles from "../page.module.css";
 
+type ChildComponentProps = {
+    onButtonClick: () => void;  // Define the type of the prop here
+  };
 
-export default function ErrorPage() {
+export default function ErrorPage({ onButtonClick }: ChildComponentProps) {
     return (
       <main>
         <div className={styles.errorBody}>
@@ -14,7 +17,7 @@ export default function ErrorPage() {
                         <text className={styles.errorDescriptionStyle}>Unfortunately, the username or password are incorrect.</text>
                     </div>
                 </div>
-                <button className={styles.errorButton}>Okay</button>
+                <button className={styles.errorButton} onClick={onButtonClick}>Okay</button>
             </div>
         </div>
       </main>
