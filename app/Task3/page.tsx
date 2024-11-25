@@ -1,6 +1,7 @@
 "use client";
 
 import ErrorPage from "./components/error";
+import LoadMessege from "./components/load";
 import styles from "./page.module.css";
 import { useRouter } from 'next/navigation';
 
