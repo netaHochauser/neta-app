@@ -58,24 +58,30 @@ export default function LoginPage() {
         </div>
       </div>
       <div className={styles.welcome}>
-        <text className={styles.welcomeTitle}>Welcome to WasApp</text>
-        <text className={styles.welcomeTalk}>Share your childhood memories with</text>
-        <text className={styles.welcomeTalk}>friends and communities</text>
+        <div className={styles.welcomeTitle}>
+          <div className={styles.welcomTitleStyle}>Welcome to WasApp</div>
+        </div>
+        <div className={styles.welcomeTalk}>
+          <div className={styles.welcomeTalkStyle}>Share your childhood memories with friends and communities</div>
+        </div>
       </div>
 
       <div className={styles.inputsAndButtons}>
-        <div className={styles.inputs}>
           <div className={styles.emailAndPassward}>
-            <input 
-                className={styles.input} 
+            <div className={styles.input}>
+              <input 
+                  className={styles.inputStyle} 
+                  type="text"  
+                  placeholder="Email"
+                  />
+            </div>
+            <div className={styles.input}>
+              <input 
+                className={styles.inputStyle} 
                 type="text"  
-                placeholder="Email"
+                placeholder="Passward"
                 />
-            <input 
-              className={styles.input} 
-              type="text"  
-              placeholder="Passward"
-              />
+            </div>
           </div>
           <text className={styles.cantRemember}>Can’t Remember?</text>
         </div>
@@ -83,7 +89,6 @@ export default function LoginPage() {
           <button className={styles.login} onClick={handleLoginClick}>Login</button>
           <button className={styles.signUp}>Sign Up</button>
         </div>
-      </div> 
       </div>
       <div className={styles.lowerBar}>
       <svg xmlns="http://www.w3.org/2000/svg" width="134" height="5" viewBox="0 0 134 5" fill="none">
