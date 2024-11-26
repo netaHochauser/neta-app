@@ -2,6 +2,9 @@ import React from 'react';
 import styles from "../page.module.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import Lottie from "lottie-react";
+import animationData from "../../../public/Animation.json";
+
 
 
 export default function LoadMessege(){
@@ -28,7 +31,11 @@ export default function LoadMessege(){
   return (
     <div className={styles.loadMessegeBody}>
         <div className={styles.loadVideoBody}>
-          <img src="/public/load.gif" alt="GIF Description" />
+          <Lottie 
+            animationData={animationData} 
+            loop={true} 
+            autoplay={true} 
+          />
         </div>
         <div className={styles.loadMessageContainer}>
           <div className={styles.loadMessageStyle}>{loadingMesseges[currentIndex]}</div>
