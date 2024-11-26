@@ -2,20 +2,27 @@ import { NASA_API_KEY } from "@/lib/config";
 import styles from "./page.module.css";
 
 type Nasaprops = {
-  title : string;
+  title: string;
   date: string;
   explanation: string;
   url: string;
 }
 
-async function getData(count : number ) {
+async function getData(count: number) {
   const apiKey = NASA_API_KEY;
-  const response = await fetch('https://api.nasa.gov/planetary/apod?count='+ count +"&api_key="+apiKey);
+  const response = await fetch(`https://api.nasa.gov/planetary/apod?count=${count}&api_key=${apiKey}`);
   const data = await response.json();
-  return data;
-};
+  
+  // Check if the data is an array before returning it
+  if (Array.isArray(data)) {
+    return data;
+  } else {
+    console.error('Unexpected data format:', data);
+    return [];  // Return an empty array if data is not an array
+  }
+}
 
-function NasaItem(props : Nasaprops){
+function NasaItem(props: Nasaprops) {
   return (
     <div>
       <h1>{props.title}</h1>
@@ -26,20 +33,26 @@ function NasaItem(props : Nasaprops){
   );
 }
 
-export default async function NasaApp(){
+export default async function NasaApp() {
   const nasaData = await getData(10);
+
+  // Make sure nasaData is an array before trying to map over it
+  if (!Array.isArray(nasaData)) {
+    return <div>Error: Could not load data.</div>;
+  }
 
   return (
     <div className={styles.data}>
       <h1>Nasa Images</h1>
-      {nasaData.map((n:Nasaprops, index: number) => 
-      <NasaItem
-        key={index}
-        title={n.title}
-        date={n.date}
-        explanation={n.explanation}
-        url={n.url}
-      />)}
+      {nasaData.map((n: Nasaprops, index: number) => (
+        <NasaItem
+          key={index}
+          title={n.title}
+          date={n.date}
+          explanation={n.explanation}
+          url={n.url}
+        />
+      ))}
     </div>
   );
 }
