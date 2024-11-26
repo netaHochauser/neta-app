@@ -27,9 +27,9 @@ export default function LoadMessege(){
   
   return (
     <div className={styles.loadMessegeBody}>
-        {/* <video autoPlay loop muted className={styles.loadVideo}>
-            <source src="/loading.mp4" type="video/mp4" />
-          </video> */}
+        <div className={styles.loadVideoBody}>
+          <img src="/public/load.gif" alt="GIF Description" />
+        </div>
         <div className={styles.loadMessageContainer}>
           <div className={styles.loadMessageStyle}>{loadingMesseges[currentIndex]}</div>
         </div>
