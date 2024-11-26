@@ -6,10 +6,18 @@ import ErrorPage from "./components/error";
 import { useEffect } from "react";
 import LoadMessege from "./components/load";
 
-
 export default function LoginPage() {
   const [isOverlayVisible, setOverlayVisible] = useState(false);
   const [isNextComponentVisible, setNextComponentVisible] = useState(false);
+
+  useEffect(() => {
+    // Safely access the `document` object here
+    console.log(document.title);
+    if (typeof window !== 'undefined') {
+      // Safe to use document here
+      console.log(document.title);
+    }
+  }, []);
 
   function handleButtonClick(){
     setOverlayVisible(true); // Show overlay when the button is clicked
@@ -50,13 +58,13 @@ export default function LoginPage() {
         </div>
         <div className={styles.upperBarMore}>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4H13C13.5523 4 14 4.44772 14 5V11C14 11.5523 13.5523 12 13 12H12C11.4477 12 11 11.5523 11 11V5C11 4.44772 11.4477 4 12 4Z" fill="#D1D1D6"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 6H8.5C9.05228 6 9.5 6.44772 9.5 7V11C9.5 11.5523 9.05228 12 8.5 12H7.5C6.94772 12 6.5 11.5523 6.5 11V7C6.5 6.44772 6.94772 6 7.5 6Z" fill="#D1D1D6"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.5H4C4.55228 7.5 5 7.94772 5 8.5V11C5 11.5523 4.55228 12 4 12H3C2.44772 12 2 11.5523 2 11V8.5C2 7.94772 2.44772 7.5 3 7.5Z" fill="#D1D1D6"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 2H17.5C18.0523 2 18.5 2.44772 18.5 3V11C18.5 11.5523 18.0523 12 17.5 12H16.5C15.9477 12 15.5 11.5523 15.5 11V3C15.5 2.44772 15.9477 2 16.5 2Z" fill="#EBEBF5" fill-opacity="0.3"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4H13C13.5523 4 14 4.44772 14 5V11C14 11.5523 13.5523 12 13 12H12C11.4477 12 11 11.5523 11 11V5C11 4.44772 11.4477 4 12 4Z" fill="white"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 6H8.5C9.05228 6 9.5 6.44772 9.5 7V11C9.5 11.5523 9.05228 12 8.5 12H7.5C6.94772 12 6.5 11.5523 6.5 11V7C6.5 6.44772 6.94772 6 7.5 6Z" fill="white"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7.5H4C4.55228 7.5 5 7.94772 5 8.5V11C5 11.5523 4.55228 12 4 12H3C2.44772 12 2 11.5523 2 11V8.5C2 7.94772 2.44772 7.5 3 7.5Z" fill="white"/>
+            <path clip-rule="evenodd" d="M12 4H13C13.5523 4 14 4.44772 14 5V11C14 11.5523 13.5523 12 13 12H12C11.4477 12 11 11.5523 11 11V5C11 4.44772 11.4477 4 12 4Z" fill="#D1D1D6"/>
+            <path clip-rule="evenodd" d="M7.5 6H8.5C9.05228 6 9.5 6.44772 9.5 7V11C9.5 11.5523 9.05228 12 8.5 12H7.5C6.94772 12 6.5 11.5523 6.5 11V7C6.5 6.44772 6.94772 6 7.5 6Z" fill="#D1D1D6"/>
+            <path clip-rule="evenodd" d="M3 7.5H4C4.55228 7.5 5 7.94772 5 8.5V11C5 11.5523 4.55228 12 4 12H3C2.44772 12 2 11.5523 2 11V8.5C2 7.94772 2.44772 7.5 3 7.5Z" fill="#D1D1D6"/>
+            <path clip-rule="evenodd" d="M16.5 2H17.5C18.0523 2 18.5 2.44772 18.5 3V11C18.5 11.5523 18.0523 12 17.5 12H16.5C15.9477 12 15.5 11.5523 15.5 11V3C15.5 2.44772 15.9477 2 16.5 2Z" fill="#EBEBF5" fill-opacity="0.3"/>
+            <path clip-rule="evenodd" d="M12 4H13C13.5523 4 14 4.44772 14 5V11C14 11.5523 13.5523 12 13 12H12C11.4477 12 11 11.5523 11 11V5C11 4.44772 11.4477 4 12 4Z" fill="white"/>
+            <path clip-rule="evenodd" d="M7.5 6H8.5C9.05228 6 9.5 6.44772 9.5 7V11C9.5 11.5523 9.05228 12 8.5 12H7.5C6.94772 12 6.5 11.5523 6.5 11V7C6.5 6.44772 6.94772 6 7.5 6Z" fill="white"/>
+            <path clip-rule="evenodd" d="M3 7.5H4C4.55228 7.5 5 7.94772 5 8.5V11C5 11.5523 4.55228 12 4 12H3C2.44772 12 2 11.5523 2 11V8.5C2 7.94772 2.44772 7.5 3 7.5Z" fill="white"/>
           </svg>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
             <path d="M8.13271 8.93958C8.77221 8.93958 9.39359 9.10762 9.94111 9.42804L10.1629 9.55787C10.3311 9.65629 10.3607 9.88665 10.2228 10.0242L8.32873 11.913C8.21239 12.029 8.02376 12.029 7.90742 11.913L6.02551 10.0363C5.88823 9.89939 5.91684 9.67021 6.0836 9.57106L6.30295 9.44064C6.85549 9.1121 7.48477 8.93958 8.13271 8.93958Z" fill="white"/>
@@ -65,7 +73,7 @@ export default function LoginPage() {
           </svg>
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="12" viewBox="0 0 25 12" fill="none">
             <path d="M24 4C24.5523 4 25 4.44772 25 5V7C25 7.55228 24.5523 8 24 8V4Z" fill="#EBEBF5" fill-opacity="0.3"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.6569 0 23 1.34315 23 3V9C23 10.6569 21.6569 12 20 12H3C1.34315 12 0 10.6569 0 9V3C0 1.34315 1.34315 0 3 0ZM3 1C1.89543 1 1 1.89543 1 3V9C1 10.1046 1.89543 11 3 11H20C21.1046 11 22 10.1046 22 9V3C22 1.89543 21.1046 1 20 1H3Z" fill="#EBEBF5" fill-opacity="0.3"/>
+            <path clip-rule="evenodd" d="M3 0H20C21.6569 0 23 1.34315 23 3V9C23 10.6569 21.6569 12 20 12H3C1.34315 12 0 10.6569 0 9V3C0 1.34315 1.34315 0 3 0ZM3 1C1.89543 1 1 1.89543 1 3V9C1 10.1046 1.89543 11 3 11H20C21.1046 11 22 10.1046 22 9V3C22 1.89543 21.1046 1 20 1H3Z" fill="#EBEBF5" fill-opacity="0.3"/>
             <rect x="2" y="2" width="19" height="8" rx="1" fill="white"/>
           </svg>
         </div>
