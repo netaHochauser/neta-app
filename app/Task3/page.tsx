@@ -2,9 +2,13 @@
 
 import styles from "./page.module.css";
 import { useState } from "react";
-import ErrorPage from "./components/error";
+// import ErrorPage from "./components/error";
 import { useEffect } from "react";
-import LoadMessege from "./components/load";
+// import LoadMessege from "./components/load";
+import dynamic from "next/dynamic";
+
+const ErrorPage = dynamic(() => import("./components/error"), { ssr: false });
+const LoadMessege = dynamic(() => import("./components/load"), { ssr: false });
 
 export default function LoginPage() {
   const [isOverlayVisible, setOverlayVisible] = useState(false);
