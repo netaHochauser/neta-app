@@ -1,6 +1,11 @@
+.relative{
+  position: relative;
+}
+
 .mainWindow{
   display: grid;
   justify-content: center;
+  position: absolute;
 }
 
 .logo{
@@ -253,6 +258,19 @@ align-self: stretch;
   border-radius: 1.25rem;
 }
 
+.errorPage{
+  display: flex;
+  position: absolute; /* Positioned relative to .parent */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20; /* Above the second layer */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent red */
+  justify-content: center;
+  align-items: center;
+}
+
 .errorBody{
   display: flex;
   width: 19.6875rem;
@@ -265,7 +283,6 @@ align-self: stretch;
   border-radius: 0.375rem;
   border: 1px solid var(--Vivid-Orange, #FFC1A0);
   background: var(--Sleep-Paralysis-Demon-Purple, #280F36);
-  z-index: 1100; /* Higher than other elements */
 }
 
 .errorLayout{
@@ -375,22 +392,48 @@ align-self: stretch;
 }
 
 
+.loadMessegeBody{
+  display: flex;
+  padding: 0.625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
-.loadMessageContainer {
-  align-self: stretch;
-  padding: 10px;
+.loadVideoBody{
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  width: 11.4rem;
+  height: 11.4375rem;
 }
 
-.loadMessage {
+.loadMessageContainer {
+  display: flex;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+}
+
+.loadMessageStyle {
+  color: var(--Vivid-Orange, #FFC1A0);
   text-align: center;
-  color: #FFC1A0;
-  font-size: 16px;
-  font-family: 'Nunito', sans-serif;
+  font-feature-settings: 'liga' off, 'clig' off;
+  
+  /* normal text */
+  font-family: 'Koteret Gdola', Nunito, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
   font-weight: 400;
-  line-height: 21px;
-  word-wrap: break-word;
+  line-height: 1.3125rem; /* 131.25% */
 }

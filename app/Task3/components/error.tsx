@@ -6,21 +6,21 @@ type ChildComponentProps = {
 
 export default function ErrorPage({ onButtonClick }: ChildComponentProps) {
     return (
-      <main>
-        <div className={styles.errorBody}>
-            <div className={styles.errorLayout}>
-                <div className={styles.errorText}>
-                    <div className={styles.errorTitle}>
-                        <text className={styles.errorTitleStyle}>Forgotten Memory</text>
-                    </div>
-                    <div className={styles.errorDescription}>
-                        <text className={styles.errorDescriptionStyle}>Unfortunately, the username or password are incorrect.</text>
-                    </div>
-                </div>
-                <button className={styles.errorButton} onClick={onButtonClick}>Okay</button>
-            </div>
+        <div className={styles.errorPage}>
+          <div className={styles.errorBody}>
+              <div className={styles.errorLayout}>
+                  <div className={styles.errorText}>
+                      <div className={styles.errorTitle}>
+                          <text className={styles.errorTitleStyle}>Forgotten Memory</text>
+                      </div>
+                      <div className={styles.errorDescription}>
+                          <text className={styles.errorDescriptionStyle}>Unfortunately, the username or password are incorrect.</text>
+                      </div>
+                  </div>
+                  <button className={styles.errorButton} onClick={onButtonClick}>Okay</button>
+              </div>
+          </div>
         </div>
-      </main>
     );
   }
   

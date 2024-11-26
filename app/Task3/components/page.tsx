@@ -21,6 +21,7 @@ export default function LoginPage() {
     if (isOverlayVisible) {
       // After 7 seconds (to allow the overlay animation to finish), show the next component
       const timer = setTimeout(() => {
+        setOverlayVisible(false);
         setNextComponentVisible(true); // Show next component
       }, 7000); // Adjust time as per your animation duration
 
@@ -29,12 +30,12 @@ export default function LoginPage() {
   }, [isOverlayVisible]);
 
   function handleErrorClick(){
-    setOverlayVisible(false);
     setNextComponentVisible(false);
   }
 
 
   return (
+    <div className={styles.relative}>
     <div className={styles.mainWindow}>
       {isNextComponentVisible && <ErrorPage onButtonClick={handleErrorClick}/>}
       {isOverlayVisible && <LoadMessege/>}
@@ -118,6 +119,7 @@ export default function LoginPage() {
         <rect width="134" height="5" rx="2.5" fill="white"/>
       </svg>
       </div>
+    </div>
     </div>
   );
 }
