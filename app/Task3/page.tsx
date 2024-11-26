@@ -1,10 +1,10 @@
 "use client";
 
-import LoadMessege from "./components/load";
 import styles from "./page.module.css";
 import { useState } from "react";
 import ErrorPage from "./components/error";
 import { useEffect } from "react";
+import LoadMessege from "./components/load";
 
 
 export default function LoginPage() {
