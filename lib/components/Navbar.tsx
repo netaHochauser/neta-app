@@ -12,7 +12,7 @@ export default function Navbar() {
         <Link href="/">Home</Link>
         <Link href="/nasa">Nasa Images</Link>
         <Link href="/ticTacToe">Tic Tac Toe</Link>
-        <Link href="/task3">Whatsapp Memories</Link>
+        <Link href="/Task3">Whatsapp Memories</Link>
       </nav>
     </header>
   );
