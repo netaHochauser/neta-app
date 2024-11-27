@@ -9,7 +9,7 @@ type Nasaprops = {
 }
 
 async function getData(count: number) {
-  const apiKey = NASA_API_KEY;
+  const apiKey = process.env.NASA_API_KEY;
   const response = await fetch(`https://api.nasa.gov/planetary/apod?count=${count}&api_key=${apiKey}`);
   const data = await response.json();
   
