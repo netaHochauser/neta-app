@@ -1,4 +1,3 @@
-import { NASA_API_KEY } from "@/lib/config";
 import styles from "./page.module.css";
 
 type Nasaprops = {
@@ -9,8 +8,8 @@ type Nasaprops = {
 }
 
 async function getData(count: number) {
-  const apiKey = process.env.NASA_API_KEY;
-  const response = await fetch(`https://api.nasa.gov/planetary/apod?count=${count}&api_key=${apiKey}`);
+  const apiKey = process.env.NEXT_PUBLIC_NASA_API_KEY;
+  const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`);
   const data = await response.json();
   
   // Check if the data is an array before returning it
